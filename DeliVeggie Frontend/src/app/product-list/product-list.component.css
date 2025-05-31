@@ -1,0 +1,145 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffffff;
+  color: #1a1a1a;
+}
+
+/* Header */
+.site-header {
+  background-color: #0d0d0d;
+  /* almost black */
+  color: white;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 12px;
+  filter: none;
+}
+
+.site-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Container */
+.container.product-grid {
+  max-width: 1200px;
+  margin: 50px auto 80px;
+  padding: 30px 20px;
+  background-color: #f9f9f9;
+  /* very light gray */
+  border-radius: 12px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.08);
+}
+
+.container.product-grid h2 {
+  text-align: center;
+  margin-bottom: 35px;
+  font-size: 2.4rem;
+  color: #ff3f6c;
+  /* bright pinkish-red */
+  font-weight: 700;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 28px;
+  padding: 0 10px;
+}
+
+/* Product Card as link */
+.product-card {
+  display: block;
+  /* important for <a> */
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 22px 18px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, color 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+  /* remove underline */
+  color: #1a1a1a;
+}
+
+.product-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 18px 38px rgba(255, 63, 108, 0.25);
+  color: #ff3f6c;
+}
+
+/* Product ID */
+.product-id {
+  font-size: 0.85rem;
+  color: #666666;
+  margin-bottom: 10px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* Product Name */
+.product-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  /* inherit color from .product-card */
+}
+
+/* Footer */
+.site-footer {
+  background-color: #0d0d0d;
+  color: #cccccc;
+  text-align: center;
+  padding: 25px 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  margin-top: 60px;
+}
+
+/* Loading Indicator */
+.loading-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 1.2em;
+  color: #555;
+  padding: 20px;
+}
+
+.loading-gif {
+  width: 24px;
+  height: 24px;
+}
+
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,46 @@
+<div class="page-wrapper">
+  <!-- Header -->
+  <header class="site-header">
+    <div class="logo">
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/shopping-cart.png" alt="deliveggie_Logo">
+      <span class="site-title">Deli Veggie</span>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <div class="container product-details">
+    <div class="back-link">
+      <a [routerLink]="['/product']" routerLinkActive="active">&larr; Back to Products</a>
+    </div>
+
+    <section class="product-info-card">
+      <header class="product-info-header">
+        <h3>Product Details</h3>
+        <hr />
+      </header>
+      <dl class="product-details-list">
+        <div class="detail-item">
+          <dt>Id</dt>
+          <dd>{{ product.id }}</dd>
+        </div>
+        <div class="detail-item">
+          <dt>Name</dt>
+          <dd>{{ product.name }}</dd>
+        </div>
+        <div class="detail-item">
+          <dt>Entry Date</dt>
+          <dd>{{ product.entryDate | date: 'mediumDate' }}</dd>
+        </div>
+        <div class="detail-item">
+          <dt>Current Price</dt>
+          <dd>{{ product.price | currency:'INR' }}</dd>
+        </div>
+      </dl>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    &copy; 2025 Deli Veggie. All rights reserved.
+  </footer>
+</div>
